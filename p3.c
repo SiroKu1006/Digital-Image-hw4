@@ -127,7 +127,7 @@ int main()
     }
 
     // 5. 寫檔
-    WriteImage("p3_spectrum.bmp", (U8 *)&fh, (U8 *)&ih, colTbl, outSpec, width, height);
+    // WriteImage("p3_spectrum.bmp", (U8 *)&fh, (U8 *)&ih, colTbl, outSpec, width, height); 
     WriteImage("p3_phase.bmp", (U8 *)&fh, (U8 *)&ih, colTbl, outPhase, width, height);
 
     // 釋放

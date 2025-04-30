@@ -149,7 +149,7 @@ int main()
 
    // Spectrum:創立新圖spectrum.bmp
    /* 開啟新檔案 */
-   if( ( output_file = fopen("spectrum.bmp","wb") ) == NULL ){
+   if( ( output_file = fopen("p3_spectrum.bmp","wb") ) == NULL ){
       fprintf(stderr,"Output file can't open.\n");
       exit(0);
    }
@@ -164,11 +164,11 @@ int main()
    fclose (output_file);
 
    // Phase:創立新圖片phase.bmp
-   /* 開啟新檔案 */
-   if( ( output_file = fopen("p3_phase.bmp","wb") ) == NULL ){
-      fprintf(stderr,"Output file can't open.\n");
-      exit(0);
-   }
+   /* 開啟新檔案 (錯的)*/ 
+   // if( ( output_file = fopen("dl_phase.bmp","wb") ) == NULL ){
+   //    fprintf(stderr,"Output file can't open.\n");
+   //    exit(0);
+   // }
 
    fwrite(bmpfileheader1, sizeof(bmpfileheader1), 1, output_file);
    fwrite(bmpinfoheader1, sizeof(bmpinfoheader1), 1, output_file);
