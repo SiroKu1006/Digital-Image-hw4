@@ -11,8 +11,10 @@
 ## P3
 ```
  gcc -o p3 p3.c fft.c -lm
+ gcc -o rot rot.c fft.c -lm
  gcc -o spectrum spectrum.c fft.c -lm
+ ./rot
  ./p3
  ./spectrum
 ```
-然後把
+
