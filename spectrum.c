@@ -41,8 +41,8 @@ int main()
    double max, D, H;
    int D0=15, n=2;
 
-   //rotate.bmp¬°Fig0424(a).bmp ±ÛÂà45«×
-   i = ReadDataSize("rotate.bmp");
+   //rotate.bmpç‚ºFig0424(a).bmp æ—‹è½‰45åº¦
+   i = ReadDataSize("rotated.bmp");
    data1 = (U_CHAR *)malloc( i );
    if (data1 == NULL) {
       exit(0);
@@ -58,7 +58,7 @@ int main()
       exit(0);
    }
 
-   ReadImageData("rotate.bmp", bmpfileheader1, bmpinfoheader1, color_table1, data1);
+   ReadImageData("rotated.bmp", bmpfileheader1, bmpinfoheader1, color_table1, data1);
    biWidth           =   GET_4B(bmpinfoheader1,4);
    biHeight          =   GET_4B(bmpinfoheader1,8);
 
@@ -75,7 +75,7 @@ int main()
    biWidth4 = ((biWidth+3)/4 *4);
 
    // Process the file
-   // centering¨C­Ó¹³³t¦¨¤W-1^(i+1)
+   // centeringæ¯å€‹åƒé€Ÿæˆä¸Š-1^(i+1)
    for (i=0; i < biHeight; i++)
    {
        k = i* biWidth4;
@@ -147,8 +147,8 @@ int main()
        }
    }
 
-   // Spectrum:³Ğ¥ß·s¹Ïspectrum.bmp
-   /* ¶}±Ò·sÀÉ®× */
+   // Spectrum:å‰µç«‹æ–°åœ–spectrum.bmp
+   /* é–‹å•Ÿæ–°æª”æ¡ˆ */
    if( ( output_file = fopen("spectrum.bmp","wb") ) == NULL ){
       fprintf(stderr,"Output file can't open.\n");
       exit(0);
@@ -163,9 +163,9 @@ int main()
  
    fclose (output_file);
 
-   // Phase:³Ğ¥ß·s¹Ï¤ùphase.bmp
-   /* ¶}±Ò·sÀÉ®× */
-   if( ( output_file = fopen("phase.bmp","wb") ) == NULL ){
+   // Phase:å‰µç«‹æ–°åœ–ç‰‡phase.bmp
+   /* é–‹å•Ÿæ–°æª”æ¡ˆ */
+   if( ( output_file = fopen("p3_phase.bmp","wb") ) == NULL ){
       fprintf(stderr,"Output file can't open.\n");
       exit(0);
    }
@@ -199,7 +199,7 @@ int ReadDataSize(char *name)
    INT32 biHeight = 0 ;
    INT16 BitCount = 0 ;
 
-   /* ¶}±ÒÀÉ®× */
+   /* é–‹å•Ÿæª”æ¡ˆ */
    if( ( input_file = fopen(name,"rb") ) == NULL ){
       fprintf(stderr,"File can't open.\n");
       exit(0);
@@ -248,7 +248,7 @@ void ReadImageData(char *name, U_CHAR *bmpfileheader, U_CHAR *bmpinfoheader, U_C
    INT32 biClrUsed = 0 ;
    INT32 biClrImp = 0 ;
 
-   /* ¶}±ÒÀÉ®× */
+   /* é–‹å•Ÿæª”æ¡ˆ */
    if( ( input_file = fopen(name,"rb") ) == NULL ){
       fprintf(stderr,"File can't open.\n");
       exit(0);
