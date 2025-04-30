@@ -59,6 +59,7 @@
   "files.associations": {
     "*.embeddedhtml": "html",
     "P1.C": "cpp",
-    "stdio.h": "c"
+    "stdio.h": "c",
+    "fft.h": "c"
   }
 }
